@@ -1,0 +1,31 @@
+Copying tests/userprog/wait-twice to scratch partition...
+Copying tests/userprog/child-simple to scratch partition...
+Writing command line to /tmp/w1l45k55v7.dsk...
+qemu -hda /tmp/w1l45k55v7.dsk -hdb /tmp/ud8KV121Om.dsk -hdc /tmp/YqNwSphLvr.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f extract run wait-twice
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 191 sector (95 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Putting 'wait-twice' into the file system...
+Putting 'child-simple' into the file system...
+Erasing ustar archive...
+Executing 'wait-twice':
+(wait-twice) begin
+wait-twice: exit(-1)
+Execution of 'wait-twice' complete.
+Timer: 107 ticks
+Thread: 30 idle ticks, 76 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 88 reads, 388 writes
+hd1:0: 190 reads, 2 writes
+Console: 919 characters output
+Keyboard: 0 keys pressed
+Exception: 1 page faults
+Powering off...

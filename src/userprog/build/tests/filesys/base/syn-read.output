@@ -1,0 +1,36 @@
+Copying tests/filesys/base/syn-read to scratch partition...
+Copying tests/filesys/base/child-syn-read to scratch partition...
+Writing command line to /tmp/SZaOMA9D3v.dsk...
+qemu -hda /tmp/SZaOMA9D3v.dsk -hdb /tmp/syMPhnnPkz.dsk -hdc /tmp/4yzSIbeEhQ.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f extract run syn-read
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 212 sector (106 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch disk into file system...
+Putting 'syn-read' into the file system...
+Putting 'child-syn-read' into the file system...
+Erasing ustar archive...
+Executing 'syn-read':
+(syn-read) begin
+(syn-read) create "data"
+(syn-read) open "data"
+(syn-read) write "data"
+(syn-read) close "data"
+(syn-read) exec child 1 of 10: "child-syn-read 0"
+syn-read: exit(-1)
+Execution of 'syn-read' complete.
+Timer: 111 ticks
+Thread: 30 idle ticks, 77 kernel ticks, 4 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 118 reads, 438 writes
+hd1:0: 211 reads, 2 writes
+Console: 1057 characters output
+Keyboard: 0 keys pressed
+Exception: 1 page faults
+Powering off...
